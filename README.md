@@ -176,11 +176,10 @@ class Program
 }
 ```
 // !Результат выполнения
-<img width="1528" height="773" alt="TASK-6 0ne" src="https://github.com/user-attachments/assets/fd6076e7-7cd2-4a8b-b05b-1c28624cc5a9" />
-<img width="1532" height="774" alt="TASK-6 tw0" src="https://github.com/user-attachments/assets/f282c47c-5aad-478e-8f0f-0e1bad678db7" />
-<img width="1532" height="771" alt="TASK-6 1hree" src="https://github.com/user-attachments/assets/c594b68d-a361-4914-8459-eb10ae7009c1" />
-<img width="1530" height="772" alt="TASK-6 f0ur" src="https://github.com/user-attachments/assets/e39a6f8e-3cc4-47eb-8294-5f5464a1164a" />
-<img width="1919" height="692" alt="TASK-6 RESULT" src="https://github.com/user-attachments/assets/e68f404a-5fe2-4612-9b63-4e25e228ec3d" />
+<img width="1527" height="769" alt="TASK-6 0ne" src="https://github.com/user-attachments/assets/d1f98153-9c5c-4d6c-a11e-db4d8627f3e7" />
+<img width="1521" height="769" alt="TASK-5 tw0" src="https://github.com/user-attachments/assets/038000c0-bb44-4a88-aad4-ed7fa50e6bce" />
+<img width="1537" height="769" alt="TASK-6 1hree" src="https://github.com/user-attachments/assets/2fb654f2-9d02-456b-a789-7050cf1c8f61" />
+<img width="1536" height="771" alt="TASK-6 f0ur" src="https://github.com/user-attachments/assets/5b477fe4-6a7f-4824-95fc-4036b818569c" />
 
 // ДЕЛАЛИ АРИСТОВ И БАШКАТОВА
 :P
