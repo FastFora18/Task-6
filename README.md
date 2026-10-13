@@ -171,5 +171,12 @@ class Program
     }
 }
 ```
+// !Результат выполнения
+<img width="1528" height="773" alt="TASK-6 0ne" src="https://github.com/user-attachments/assets/fd6076e7-7cd2-4a8b-b05b-1c28624cc5a9" />
+<img width="1532" height="774" alt="TASK-6 tw0" src="https://github.com/user-attachments/assets/f282c47c-5aad-478e-8f0f-0e1bad678db7" />
+<img width="1532" height="771" alt="TASK-6 1hree" src="https://github.com/user-attachments/assets/c594b68d-a361-4914-8459-eb10ae7009c1" />
+<img width="1530" height="772" alt="TASK-6 f0ur" src="https://github.com/user-attachments/assets/e39a6f8e-3cc4-47eb-8294-5f5464a1164a" />
+<img width="1919" height="692" alt="TASK-6 RESULT" src="https://github.com/user-attachments/assets/e68f404a-5fe2-4612-9b63-4e25e228ec3d" />
+
 // ДЕЛАЛИ АРИСТОВ И БАШКАТОВА
 :P
