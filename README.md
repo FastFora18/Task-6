@@ -22,7 +22,7 @@ class Program
         int[,] radiationLevel = new int[Size, Size];
         Random rng = new Random();
 
-        // 2. Заполнение матриц (Сначала полностью строим пустую станцию)
+        // 2. Заполнение матриц
         for (int row = 0; row < Size; row++)
         {
             for (int col = 0; col < Size; col++)
