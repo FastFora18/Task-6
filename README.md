@@ -118,9 +118,9 @@ class Program
 
         // 9. Запрос координат для установки свинцового экрана
         Console.WriteLine("\nУстановка свинцового экрана.");
-        Console.Write($"Введите номер строки (0-{Size - 1}): ");
+        Console.Write($"Введите номер строки (1-4): ");
         bool rowOk = int.TryParse(Console.ReadLine(), out int targetRow);
-        Console.Write($"Введите номер столбца (0-{Size - 1}): ");
+        Console.Write($"Введите номер столбца (1-4): ");
         bool colOk = int.TryParse(Console.ReadLine(), out int targetCol);
 
         if (rowOk && colOk &&
@@ -135,7 +135,7 @@ class Program
             Console.WriteLine("Ошибка: введены некорректные координаты. Экран не установлен.");
         }
 
-        // 10. Подсчет общего числа непроходимых завалов # на всей станции
+        // 10. Подсчет общего числа непроходимых завалов (# это завал есче) на всей станции
         int WallCount = 0;
         foreach (char cell in station)
         {
