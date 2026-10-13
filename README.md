@@ -22,12 +22,12 @@ class Program
         int[,] radiationLevel = new int[Size, Size];
         Random rng = new Random();
 
-        // 2. Заполнение матриц
+        // 2. Заполнение матриц (Сначала полностью строим пустую станцию)
         for (int row = 0; row < Size; row++)
         {
             for (int col = 0; col < Size; col++)
             {
-                // Внешние границы — обшивка, внутри — коридоры
+                // Внешние границы — стены, внутри — коридоры
                 if (row == 0 || row == Size - 1 || col == 0 || col == Size - 1)
                 {
                     station[row, col] = Wall;
@@ -36,10 +36,15 @@ class Program
                 {
                     station[row, col] = Corridor;
                 }
+
+                // 4. Заполнение параллельной матрицы радиации числами от 0 до 100
+                radiationLevel[row, col] = rng.Next(0, 101); // (101, чтобы число 100 тоже могло выпасть)
+            }
+        }
         // 3. Размещение выхода
         station[1, 1] = Exit;
 
-        // Размещение радиационных стержней в случайных внутренних ячейках
+        // Размещение радиационных стержней в случайных внутренних ячейках коридоров
         int rodsPlaced = 0;
         while (rodsPlaced < 3)
         {
@@ -51,10 +56,7 @@ class Program
                 rodsPlaced++;
             }
         }
-                // 4. Создать параллельную целочисленную матрицу radiationLevel того же размера (см. пункт 1) и заполнить ее числами от 0 до 100 с помощью Random.
-                radiationLevel[row, col] = rng.Next(0, 100);
-            }
-        }
+
         // 5. Вывод матрицы станции с выделением стержней красным цветом
         for (int row = 0; row < Size; row++)
         {
@@ -102,7 +104,7 @@ class Program
             }
         }
         Console.WriteLine($"Максимальный уровень радиации: {maxRadiation}");
-        Console.WriteLine("Координаты отсека (клетки) с максимальной радиацией: " +
+        Console.WriteLine("Координаты отсекa (клетки) с максимальной радиацией: " +
             string.Join(", ", maxCoords.Select(c => $"[{c.Item1}, {c.Item2}]")));
         Console.WriteLine();
 
@@ -116,9 +118,9 @@ class Program
 
         // 9. Запрос координат для установки свинцового экрана
         Console.WriteLine("\nУстановка свинцового экрана.");
-        Console.Write("Введите номер строки (0-4): ");
+        Console.Write($"Введите номер строки (0-{Size - 1}): ");
         bool rowOk = int.TryParse(Console.ReadLine(), out int targetRow);
-        Console.Write("Введите номер столбца (0-4): ");
+        Console.Write($"Введите номер столбца (0-{Size - 1}): ");
         bool colOk = int.TryParse(Console.ReadLine(), out int targetCol);
 
         if (rowOk && colOk &&
@@ -134,12 +136,12 @@ class Program
         }
 
         // 10. Подсчет общего числа непроходимых завалов # на всей станции
-        int hullCount = 0;
+        int WallCount = 0;
         foreach (char cell in station)
         {
-            if (cell == Wall) hullCount++;
+            if (cell == Wall) WallCount++;
         }
-        Console.WriteLine($"\nОбщее число непроходимых завалов на станции: {hullCount}");
+        Console.WriteLine($"\nОбщее число непроходимых завалов на станции: {WallCount}");
 
         // Финальный вид станции после установки экрана
         Console.WriteLine("\nИтоговое состояние станции:");
@@ -155,7 +157,7 @@ class Program
                 }
                 else if (station[row, col] == Screen)
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write(station[row, col] + " ");
                     Console.ResetColor();
                 }
@@ -168,6 +170,5 @@ class Program
         }
     }
 }
-```
 // ДЕЛАЛИ АРИСТОВ И БАШКАТОВА
 :P
