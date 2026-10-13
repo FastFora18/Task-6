@@ -175,7 +175,7 @@ class Program
     }
 }
 ```
-// !Результат выполнения
+!Результат выполнения
 <img width="1527" height="769" alt="TASK-6 0ne" src="https://github.com/user-attachments/assets/d1f98153-9c5c-4d6c-a11e-db4d8627f3e7" />
 <img width="1521" height="769" alt="TASK-5 tw0" src="https://github.com/user-attachments/assets/038000c0-bb44-4a88-aad4-ed7fa50e6bce" />
 <img width="1537" height="769" alt="TASK-6 1hree" src="https://github.com/user-attachments/assets/2fb654f2-9d02-456b-a789-7050cf1c8f61" />
