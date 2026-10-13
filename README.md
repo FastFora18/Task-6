@@ -22,7 +22,7 @@ class Program
         int[,] radiationLevel = new int[Size, Size];
         Random rng = new Random();
 
-        // 2. Заполнение матриц
+        // 2. Заполнение матриц (Сначала полностью строим пустую станцию)
         for (int row = 0; row < Size; row++)
         {
             for (int col = 0; col < Size; col++)
@@ -36,9 +36,6 @@ class Program
                 {
                     station[row, col] = Corridor;
                 }
-
-                // 4. Заполнение параллельной матрицы радиации числами от 0 до 100
-                radiationLevel[row, col] = rng.Next(0, 101); // (101, чтобы число 100 тоже могло выпасть)
             }
         }
         // 3. Размещение выхода
@@ -56,7 +53,14 @@ class Program
                 rodsPlaced++;
             }
         }
-
+        // 4. Заполнение параллельной матрицы радиации числами от 0 до 100
+        for (int row = 0; row < Size; row++)
+        {
+            for (int col = 0; col < Size; col++)
+            {
+                radiationLevel[row, col] = rng.Next(0, 101); // (101, чтобы число 100 тоже могло выпасть)
+            }
+        }
         // 5. Вывод матрицы станции с выделением стержней красным цветом
         for (int row = 0; row < Size; row++)
         {
@@ -124,8 +128,8 @@ class Program
         bool colOk = int.TryParse(Console.ReadLine(), out int targetCol);
 
         if (rowOk && colOk &&
-           targetRow >= 1 && targetRow <= 4 && // Проверка строго от 1 до 4
-           targetCol >= 1 && targetCol <= 4)   // Проверка строго от 1 до 4
+           targetRow >= 1 && targetRow <= 4 && 
+           targetCol >= 1 && targetCol <= 4)   
         {
             station[targetRow, targetCol] = Screen;
             Console.WriteLine($"Экран установлен в отсеке [{targetRow}, {targetCol}].");
