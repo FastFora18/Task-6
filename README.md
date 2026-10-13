@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 class Program
 {
-    // Константы для символов
+    // Константы для размеров и символов
     const int Size = 6;
     const char Wall = '#';
     const char Corridor = '.';
@@ -79,7 +79,7 @@ class Program
 
         // 6. Суммарный уровень радиации в каждом ряду
         Console.WriteLine("Уровень радиации по рядам:");
-        for (int row = 0; row < Size; row++)
+        for (int row = 1; row < Size - 1; row++)
         {
             int rowSum = 0;
             for (int col = 0; col < Size; col++)
@@ -124,8 +124,8 @@ class Program
         bool colOk = int.TryParse(Console.ReadLine(), out int targetCol);
 
         if (rowOk && colOk &&
-            targetRow >= 0 && targetRow < Size &&
-            targetCol >= 0 && targetCol < Size)
+           targetRow >= 1 && targetRow <= 4 && // Проверка строго от 1 до 4
+           targetCol >= 1 && targetCol <= 4)   // Проверка строго от 1 до 4
         {
             station[targetRow, targetCol] = Screen;
             Console.WriteLine($"Экран установлен в отсеке [{targetRow}, {targetCol}].");
