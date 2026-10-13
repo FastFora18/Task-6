@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 class Program
 {
-    // Константы для размеров и символов
+    // Константы для символов
     const int Size = 6;
     const char Wall = '#';
     const char Corridor = '.';
