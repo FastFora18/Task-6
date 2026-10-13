@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 class Program
 {
-    // Константы для размеров и символов
+    // Константы для размера и символов
     const int Size = 6;
     const char Wall = '#';
     const char Corridor = '.';
@@ -22,7 +22,7 @@ class Program
         int[,] radiationLevel = new int[Size, Size];
         Random rng = new Random();
 
-        // 2. Заполнение матриц (Сначала полностью строим пустую станцию)
+        // 2. Заполнение матриц 
         for (int row = 0; row < Size; row++)
         {
             for (int col = 0; col < Size; col++)
