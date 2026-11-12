@@ -1,4 +1,4 @@
-## Практическая работа № 6
+## Практическая работа №6
 ```csharp
 using System;
 using System.Collections.Generic;
